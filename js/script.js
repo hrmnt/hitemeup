@@ -404,18 +404,8 @@ const getLanguage = () => {
   return localStorage.getItem("language");
 };
 
-const details = document.querySelector("details");
 const cover = document.querySelector(".cover");
 
-details.addEventListener("toggle", (event) => {
-  if (details.open) {
-    cover.style.display = "block";
-    body.style.overflow = "hidden";
-  } else {
-    cover.style.display = "none";
-    body.style.overflow = "auto";
-  }
-});
 
 // Close details
 const eng = document.getElementById("en-lang");
