@@ -340,13 +340,13 @@ $(document).ready(function () {
     $("#soldOut").append(soldOut);
   });
 
-  console.log(lang, arrLang);
+  if (lang === "en") {
+    document.getElementById("dropdown-img").src = "img/icons/EN.svg";
+  } else {
+    document.getElementById("dropdown-img").src = "img/icons/RU.svg";
+  }
+
   $(".lang").each(function (index, item) {
-    console.log(this, arrLang[lang]);
-    if (lang === "en") {
-      document.getElementById("rus-img").src = "img/icons/EN.svg";
-      document.getElementById("en-img").src = "img/icons/RU.svg";
-    }
     $(this).text(arrLang[lang][$(this).attr("key")]);
   });
 });
@@ -418,20 +418,17 @@ details.addEventListener("toggle", (event) => {
 });
 
 // Close details
-const eng = document.getElementById("en");
-const summary = document.querySelector("summary");
+const eng = document.getElementById("en-lang");
+const ru = document.querySelector("ru-lang");
 
 eng.onclick = function () {
   console.log("EN");
-  document.getElementById("rus-img").src = "img/icons/EN.svg";
-  document.getElementById("en-img").src = "img/icons/RU.svg";
-  details.removeAttribute("open");
+  document.getElementById("dropdown-img").src = "img/icons/EN.svg";
   localStorage.setItem("language", "en");
 };
-summary.onclick = function () {
+ru.onclick = function () {
   console.log("RU");
-  document.getElementById("rus-img").src = "img/icons/RU.svg";
-  document.getElementById("en-img").src = "img/icons/EN.svg";
+  document.getElementById("dropdown-img").src = "img/icons/RU.svg";
   localStorage.setItem("language", "ru");
 };
 

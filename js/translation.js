@@ -247,9 +247,14 @@ var arrLang = {
 
 $(function () {
   $(".translate").click(function () {
-    var lang = $(this).attr("id");
-    console.log("TRANSATIONS");
+    var lang = $(this).attr("sio");
+    if (lang === "en") {
+      document.getElementById("dropdown-img").src = "img/icons/EN.svg";
+    } else {
+      document.getElementById("dropdown-img").src = "img/icons/RU.svg";
+    }
 
+    console.log("TRANSATIONS", lang);
     $(".lang").each(function (index, item) {
       $(this).text(arrLang[lang][$(this).attr("key")]);
     });
