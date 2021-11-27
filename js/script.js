@@ -12,7 +12,7 @@ const searchValue = document.getElementById("this-search");
 const result = document.querySelector(".search-result");
 const resultMobile = document.querySelector(".search-result-mobile");
 
-const url = "https://site-backend-hitemup.herokuapp.com/api";
+const url = "http://185.46.10.229:3000/api";
 
 var arrLang = {
   en: {
