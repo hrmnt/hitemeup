@@ -22,7 +22,7 @@
         СКИДКА 10% ПРИ ПОКУПКЕ 2 ТОВАРОВ
       </div>
       <nav class="header-nav">
-        <details>
+        <!-- <details>
           <summary class="translate" id="ru">
             <img
               id="rus-img"
@@ -39,7 +39,36 @@
               alt="choose english language"
             /><span class="lang-option lang" key="eng">en</span>
           </p>
-        </details>
+        </details> -->
+        <div class="dropdown">
+          <button class="dropbtn row-flex">
+            <img
+              id="dropdown-img"
+              src="img/icons/RU.svg"
+              alt="choose english language"
+            />
+            <span class="lang-option lang" id="key" key="rus">ru</span>
+            <div class="lang-arrow"></div>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">
+              <div class="translate row-flex" sio="ru" id="ru-lang">
+                <img
+                  src="img/icons/RU.svg"
+                  alt="choose english language"
+                /><span class="lang-option lang dropdown-text">RU</span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="translate row-flex" sio="en" id="en-lang">
+                <img
+                  src="img/icons/EN.svg"
+                  alt="choose english language"
+                /><span class="lang-option lang dropdown-text">EN</span>
+              </div>
+            </a>
+          </div>
+        </div>
         <ul class="page-navigation">
           <li class="">
             <a
