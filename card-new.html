@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <title>Parsing page</title>
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Header starts  -->
+    <header>
+      <div class="discount uppercase lang" key="discount">
+        СКИДКА 10% ПРИ ПОКУПКЕ 2 ТОВАРОВ
+      </div>
+      <nav class="header-nav">
+        <details>
+          <summary class="translate" id="ru">
+            <img
+              id="rus-img"
+              src="img/icons/RU.svg"
+              alt="choose english language"
+            />
+            <span class="lang-option lang" key="rus">ru</span>
+            <div class="lang-arrow"></div>
+          </summary>
+          <p class="translate" id="en">
+            <img
+              id="en-img"
+              src="img/icons/EN.svg"
+              alt="choose english language"
+            /><span class="lang-option lang" key="eng">en</span>
+          </p>
+        </details>
+        <ul class="page-navigation">
+          <li class="">
+            <a
+              href="collections.html"
+              class="uppercase lang nav-links"
+              key="collections"
+              >КОЛЛЕКЦИИ</a
+            >
+          </li>
+          <li class="">
+            <a
+              href="index.html"
+              class="uppercase active lang nav-links"
+              key="home"
+              >ГЛАВНАЯ</a
+            >
+          </li>
+          <li class="">
+            <a
+              href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+              target="_blank"
+              class="uppercase lang nav-links"
+              >INSTAGRAM</a
+            >
+          </li>
+        </ul>
+        <div class="nav-icons">
+          <div class="cart">
+            <a href="order.html">
+              <svg
+                width="19"
+                height="17"
+                viewBox="0 0 19 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 6.07143H15.7736L12.3841 0.294678C12.216 0.00772045 11.8512 -0.0859699 11.5694 0.0865723C11.2882 0.259115 11.1972 0.632036 11.3659 0.919607L14.3888 6.07143H4.61119L7.63407 0.919566C7.80281 0.631995 7.71179 0.259074 7.43056 0.0865315C7.14818 -0.0860107 6.78464 0.0076796 6.6159 0.294637L3.22636 6.07139H0V7.28568H1.28868L2.79711 15.5135C2.95481 16.3751 3.6912 17 4.54822 17H14.4518C15.3088 17 16.0451 16.3751 16.2023 15.5142L17.7112 7.28568H19C19 7.28568 19 6.07143 19 6.07143ZM15.0351 15.2906C14.9829 15.5776 14.7376 15.7857 14.4517 15.7857H4.54822C4.26236 15.7857 4.01711 15.5776 3.96435 15.2901L2.49649 7.28568H16.5035L15.0351 15.2906Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="search">
+            <svg
+              class="search-icon"
+              width="20"
+              height="19"
+              viewBox="0 0 20 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.7488 17.6099L16.5993 14.6189C16.5675 14.5887 16.5267 14.5754 16.4915 14.5509C19.5582 11.0709 19.3754 5.86618 15.9335 2.59712C14.1701 0.922412 11.8254 0 9.33183 0C6.83803 0 4.49348 0.922412 2.73022 2.59712C-0.910074 6.05461 -0.910074 11.6804 2.73022 15.1374C4.49348 16.8127 6.83803 17.7351 9.33183 17.7351C11.5459 17.7351 13.64 17.0047 15.3163 15.6693C15.3418 15.7024 15.3556 15.7406 15.387 15.7704L18.5365 18.7614C18.7039 18.9204 18.9233 19 19.1427 19C19.3621 19 19.5818 18.9205 19.7489 18.7614C20.0837 18.4433 20.0837 17.928 19.7488 17.6099ZM9.33183 16.1065C7.29589 16.1065 5.382 15.3532 3.94251 13.986C0.970866 11.1636 0.970866 6.5716 3.94251 3.74864C5.382 2.38132 7.29601 1.62859 9.33183 1.62859C11.3674 1.62859 13.2816 2.38132 14.7211 3.74853C17.6928 6.57149 17.6928 11.1635 14.7211 13.9859C13.2814 15.3531 11.3675 16.1065 9.33183 16.1065Z"
+                fill="white"
+              />
+            </svg>
+            <div class="search-input invisic">
+              <input type="text" placeholder="" id="this-search" />
+            </div>
+            <p class="close-text uppercase invisic">ЗАКРЫТЬ</p>
+            <svg
+              class="close invisic"
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.28261 7.0001L13.7339 1.54851C14.0887 1.1939 14.0887 0.620557 13.7339 0.265953C13.3793 -0.088651 12.806 -0.088651 12.4514 0.265953L6.99992 5.71755L1.5486 0.265953C1.19384 -0.088651 0.620668 -0.088651 0.266072 0.265953C-0.0886906 0.620557 -0.0886906 1.1939 0.266072 1.54851L5.71739 7.0001L0.266072 12.4517C-0.0886906 12.8063 -0.0886906 13.3797 0.266072 13.7343C0.442789 13.9111 0.675145 14 0.907335 14C1.13953 14 1.37172 13.9111 1.5486 13.7343L6.99992 8.28266L12.4514 13.7343C12.6283 13.9111 12.8605 14 13.0927 14C13.3249 14 13.557 13.9111 13.7339 13.7343C14.0887 13.3797 14.0887 12.8063 13.7339 12.4517L8.28261 7.0001Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </nav>
+      <div class="search-result">
+        <h3 class="uppercase lang" key="relevant">АКТУАЛЬНОЕ</h3>
+        <div class="result-content">
+          <a class="result-item" href="collections.html#to-order">
+            <img src="img/search-pic./Худи.jpg" alt="Hoodies" />
+            <p class="uppercase lang" key="hoodie">ХУДИ</p>
+          </a>
+          <a class="result-item" href="collections.html#in-stock">
+            <img src="img/search-pic./Футболки.jpg" alt="T-Shirts" />
+            <p class="uppercase lang" key="tshirt">ФУТБОЛКИ</p>
+          </a>
+          <a class="result-item" href="collections.html#new">
+            <img src="img/search-pic./Новинки.jpg" alt="New arrival" />
+            <p class="uppercase lang" key="new">НОВИНКИ</p>
+          </a>
+          <a class="result-item" href="collections.html">
+            <img src="img/search-pic./Коллекции.jpg" alt="Collections" />
+            <p class="uppercase lang" key="collections">КОЛЛЕКЦИИ</p>
+          </a>
+          <a class="result-item" href="parsing.html">
+            <img src="img/search-pic./История.jpg" alt="Brang history" />
+            <p class="uppercase lang" key="bkg">ИСТОРИЯ</p>
+          </a>
+        </div>
+      </div>
+      <div class="cart-window">
+        <div class="all-added-products">
+          <img class="added-product" src="img/1.jpg" alt="" />
+          <!-- <img class="added-product" src="img/1.jpg" alt="" /> -->
+          <!-- <img class="added-product" src="img/1.jpg" alt="" /> -->
+        </div>
+        <p>Изделие добавлено в корзину</p>
+        <button class="ok-btn lg-btn delivery-opt">ОК</button>
+      </div>
+      <!-- For mobiles  -->
+
+      <div class="cover"></div>
+      <div class="logo">
+        <a href="index.html"
+          ><img class="logo-img" src="img/HIT'EM UP Logo.svg" alt=""
+        /></a>
+      </div>
+      <div class="search-result-mobile">
+        <hr />
+        <div class="result-content">
+          <a href="index.html" class="result-item">
+            <img src="img/search-pic./ГЛАВНАЯ.jpg" alt="Main page" />
+            <p class="uppercase">ГЛАВНАЯ</p>
+          </a>
+          <a class="result-item" href="collections.html">
+            <img src="img/search-pic./Коллекции.jpg" alt="Collections" />
+            <p class="uppercase">КОЛЛЕКЦИИ</p>
+          </a>
+          <a
+            class="result-item"
+            href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+            target="_blank"
+          >
+            <img src="img/search-pic./instagram.jpg" alt="T-Shirts" />
+            <p class="uppercase">INSTAGRAM</p>
+          </a>
+          <a class="result-item" href="collections.html">
+            <img src="img/search-pic./Новинки.jpg" alt="New arrival" />
+            <p class="uppercase">НОВИНКИ</p>
+          </a>
+          <a class="result-item" href="parsing.html">
+            <img src="img/search-pic./История.jpg" alt="Brang history" />
+            <p class="uppercase">ИСТОРИЯ</p>
+          </a>
+        </div>
+      </div>
+    </header>
+    <a href="collections.html" class="back">
+      <svg
+        width="8"
+        viewBox="0 0 8 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2.30809e-05 6.85008C2.30911e-05 6.61709 0.0924628 6.38413 0.276954 6.2065L6.08542 0.616782C6.45491 0.261203 7.05397 0.261203 7.42331 0.616782C7.79265 0.972217 7.79265 1.54861 7.42331 1.90422L2.28366 6.85008L7.42313 11.796C7.79247 12.1515 7.79247 12.7279 7.42313 13.0833C7.05379 13.439 6.45473 13.439 6.08524 13.0833L0.276774 7.49365C0.0922534 7.31593 2.30707e-05 7.08298 2.30809e-05 6.85008Z"
+          fill="black"
+        />
+      </svg>
+      <span class="uppercase lang" key="back">НАЗАД В “КОЛЛЕКЦИИ”</span>
+    </a>
+    <main class="info-box">
+      <div class="product-card">
+        <button class="like">
+          <svg
+            class="inactive-like"
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="54" height="54" fill="black" />
+            <path
+              d="M26.5 36C26.2295 36 25.9687 35.8957 25.7655 35.7061C24.9979 34.9914 24.2579 34.3198 23.605 33.7274L23.6017 33.7243C21.6875 31.9873 20.0346 30.4873 18.8845 29.0096C17.5988 27.3576 17 25.7914 17 24.0803C17 22.4179 17.5353 20.8842 18.5073 19.7615C19.4908 18.6256 20.8404 18 22.3078 18C23.4046 18 24.409 18.3692 25.2931 19.0973C25.7393 19.4649 26.1437 19.9147 26.5 20.4393C26.8565 19.9147 27.2607 19.4649 27.7071 19.0973C28.5912 18.3692 29.5956 18 30.6923 18C32.1596 18 33.5093 18.6256 34.4929 19.7615C35.4648 20.8842 36 22.4179 36 24.0803C36 25.7914 35.4013 27.3576 34.1157 29.0094C32.9656 30.4873 31.3128 31.9872 29.3989 33.724C28.7448 34.3173 28.0037 34.99 27.2344 35.7064C27.0313 35.8957 26.7703 36 26.5 36ZM22.3078 19.1852C21.1549 19.1852 20.0959 19.6751 19.3254 20.5648C18.5435 21.468 18.1128 22.7164 18.1128 24.0803C18.1128 25.5194 18.6151 26.8064 19.7413 28.2534C20.8298 29.652 22.4488 31.1212 24.3234 32.8224L24.3269 32.8255C24.9823 33.4202 25.7252 34.0944 26.4984 34.8144C27.2763 34.0931 28.0203 33.4177 28.677 32.8221C30.5514 31.1209 32.1703 29.652 33.2588 28.2534C34.3849 26.8064 34.8872 25.5194 34.8872 24.0803C34.8872 22.7164 34.4565 21.468 33.6746 20.5648C32.9043 19.6751 31.8451 19.1852 30.6923 19.1852C29.8478 19.1852 29.0724 19.471 28.3878 20.0347C27.7777 20.5373 27.3526 21.1727 27.1035 21.6172C26.9753 21.8458 26.7498 21.9823 26.5 21.9823C26.2502 21.9823 26.0247 21.8458 25.8965 21.6172C25.6475 21.1727 25.2225 20.5373 24.6122 20.0347C23.9276 19.471 23.1522 19.1852 22.3078 19.1852Z"
+              fill="white"
+            />
+          </svg>
+          <svg
+            class="active-like"
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="54" height="54" fill="black" />
+            <path
+              d="M34.4927 19.6363C33.5092 18.5811 32.1596 18 30.6923 18C29.5956 18 28.5912 18.343 27.7069 19.0193C27.2607 19.3607 26.8565 19.7784 26.5 20.2659C26.1437 19.7785 25.7393 19.3607 25.2929 19.0193C24.4088 18.343 23.4044 18 22.3077 18C20.8404 18 19.4907 18.5811 18.5071 19.6363C17.5353 20.6791 17 22.1037 17 23.6479C17 25.2373 17.5988 26.6922 18.8845 28.2267C20.0346 29.5993 21.6875 30.9927 23.6017 32.6061C24.2553 33.1571 24.9962 33.7817 25.7655 34.447C25.9687 34.6231 26.2295 34.72 26.5 34.72C26.7703 34.72 27.0313 34.6231 27.2342 34.4473C28.0035 33.7819 28.7448 33.157 29.3987 32.6057C31.3126 30.9925 32.9656 29.5993 34.1157 28.2265C35.4013 26.6922 36 25.2373 36 23.6478C36 22.1037 35.4647 20.6791 34.4927 19.6363Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+
+        <img id="mainImage" alt="Main image of this page" />
+        <div id="mobileShow" class="product-gallery mobileShow">
+          <div class="iframe-gallery-item">
+            <iframe
+              src="https://www.youtube.com/embed/KwA3GB7vAvo"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              id="film"
+            ></iframe>
+          </div>
+          <img
+            class="gallery-item middle"
+            src="img/new-card/Rectangle 80.jpg"
+            alt=""
+          />
+          <img
+            class="gallery-item right"
+            src="img/new-card/Rectangle 82.jpg"
+            alt=""
+          />
+          <img
+            class="gallery-item left"
+            src="img/new-card/Rectangle 83.jpg"
+            alt=""
+          />
+          <img
+            class="gallery-item middle"
+            src="img/new-card/Rectangle 84.jpg"
+            alt=""
+          />
+          <img
+            class="gallery-item right"
+            src="img/new-card/Rectangle 85.jpg"
+            alt=""
+          />
+        </div>
+        <div class="data-info">
+          <h3 class="lang uppercase" id="collectionCloth" key="sept"></h3>
+          <p>
+            <span id="price"> 3000 </span>
+            <span class="lang uppercase" id="currency" key="rub">РУБЛЕЙ</span>
+          </p>
+        </div>
+        <button id="addToCard" class="add-to-cart card-btn lang" key="add">
+          ДОБАВИТЬ В КОРЗИНУ
+        </button>
+        <button class="connect card-btn lang" key="contact">
+          Связаться с HIT ‘EM UP
+        </button>
+      </div>
+      <section class="details">
+        <div class="product-details">
+          <div class="product-description">
+            <p>
+              <span class="bold lang" id="clothType" key="tshirt"
+                >Футболка</span
+              >
+              <span id="clothName"></span>/
+              <span class="lang" id="gender" key="unisex"></span>
+            </p>
+            <p>
+              <span class="lang" key="machine">Машинная вышивка</span
+              ><br /><span class="lang" id="machine" key="silk"></span>
+            </p>
+            <p id="fabric">
+              <span class="bold lang" key="fabric">Ткань</span>:
+            </p>
+            <!-- <p>
+              <span class="lang" key="knit">Кулирная гладь </span> <br />
+              <span class="lang" key="cotton">95% хлопка / 5% лайкеры</span>
+            </p> -->
+            <p>
+              <span class="bold lang" key="size">Размер</span>:
+              <span class="lang" id="size" key="oversize">оверсайз</span>
+            </p>
+            <span class="bold lang" key="toorder">Для заказа</span>:
+            <ul>
+              <li class="lang" key="placeOrder">Оформите заказ на сайте</li>
+              <li class="lang" key="contact2">
+                При необходимости свяжетесь с HIT ‘EM UP
+              </li>
+            </ul>
+            <span class="bold lang" key="delivery">Доставка</span>:
+            <ul id="delivery"></ul>
+            <p class="bold">
+              <span class="lang" key="model">Рост модели на фото:</span><br />
+              <span class="lang" key="male">Парень</span>-
+              <span id="modelHeightMan"></span> см<br />
+              <span class="lang" key="female">Девушка</span>-
+              <span id="modelHeightGirl"></span> см
+            </p>
+          </div>
+          <div class="product-description">
+            <img src="img/new-card/Size.jpg" alt="" class="product-scheme" />
+            <p>
+              <span class="bold uppercase lang" key="uni"
+                >РАЗМЕР ОБЩИЙ (УНИВЕРСАЛЬНЫЙ)</span
+              ><br /><span class="lang" key="width">ширина</span> 58
+              <span class="lsng" key="cm">см</span>
+            </p>
+            <span class="bold lang uppercase" key="height"
+              >ДЛИНА ПОД РОСТ ЧЕЛОВЕКА</span
+            >
+            <ul>
+              <li>76(<span class="lang" key="for">для роста</span> 170-180)</li>
+              <li>79(<span class="lang" key="for">для роста</span> 180-190)</li>
+            </ul>
+          </div>
+        </div>
+        <div id="galery" class="product-gallery mobileHide">
+          <div class="iframe-gallery-item">
+            <iframe
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              id="films"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer  -->
+    <footer>
+      <nav class="footer-nav">
+        <a
+          class="uppercase toHide lang"
+          key="follow"
+          href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+          target="_blank"
+          >ПОДПИСАТЬСЯ НА HIT EM UP</a
+        >
+        <ul class="footer-navigation">
+          <li>
+            <a
+              href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+              class="uppercase lang"
+              key="follow"
+              target="_blank"
+              >ПОДПИСАТЬСЯ НА HIT EM UP</a
+            >
+          </li>
+          <li>
+            <a href="collections.html" class="uppercase lang" key="collections"
+              >КОЛЛЕКЦИИ</a
+            >
+          </li>
+          <li>
+            <a class="uppercase lang" key="new" href="collections.html#new"
+              >НОВИНКИ</a
+            >
+          </li>
+          <li>
+            <a href="parsing.html" class="uppercase lang" key="parsing"
+              >РАЗБОР</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="js/translation.js"></script>
+    <!-- <script src="js/rellax.min.js"></script> -->
+    <script src="js/script.js"></script>
+    <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+          sURLVariables = sPageURL.split("&"),
+          sParameterName,
+          i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split("=");
+
+          if (sParameterName[0] === sParam) {
+            return typeof sParameterName[1] === undefined
+              ? true
+              : decodeURIComponent(sParameterName[1]);
+          }
+        }
+        return false;
+      };
+      $(document).ready(() => {
+        const url = "https://site-backend-hitemup.herokuapp.com/api";
+        const lang = getLanguage();
+        const isEng = lang === "en";
+        var id = getUrlParameter("id");
+        console.log(id);
+        const ss = $.get(`${url}/shopItem/${id}`, (data) => {
+          console.log("ITEM:", data);
+          let delivery = "";
+          let images = "";
+          let fabric = "";
+          data.delivery.map(
+            (s) => (delivery += ` <li class="lang uppercase">${s.name}</li>`)
+          );
+          data.images.map(
+            (s) =>
+              (images += ` <img
+            class="gallery-item"
+            src="${url}${s}"
+            alt=""
+          />`)
+          );
+          data.cloth.map(
+            (s) =>
+              (fabric += `  <span
+                class="lang"
+                key="footer"
+                >${s[isEng ? "name_en" : "name_ru"]}</span
+              >`)
+          );
+          $("#collectionCloth").text(
+            data.collectionCloth[isEng ? "name_en" : "name_ru"]
+          );
+          $("#price").text(data.price);
+          $("#currency").text(data.currency[isEng ? "name_en" : "name_ru"]);
+          $("#clothType").text(data.clothType[isEng ? "name_en" : "name_ru"]);
+          $("#clothName").text(data[isEng ? "name_en" : "name_ru"]);
+          $("#gender").text(data.gender[isEng ? "name_en" : "name_ru"]);
+          $("#machine").text(data.machine[isEng ? "name_en" : "name_ru"]);
+
+          $("#size").text(data.size[isEng ? "name_en" : "name_ru"]);
+          $("#delivery").append(delivery);
+          $("#modelHeightMan").text(data.modelHeightMan);
+          $("#modelHeightGirl").text(data.modelHeightGirl);
+          $("#galery").append(images);
+
+          $("#mainImage").attr("src", `${url}${data.images[0]}`);
+          if (data.video) {
+            $("#film").attr("src", data.video);
+            $("#films").attr("src", data.video);
+          } else {
+            $("#film").remove();
+            $("#films").remove();
+          }
+          $("#addToCard").click(() => {
+            const items = localStorage.getItem("cart");
+            console.log(items);
+            if (items) {
+              const ss = JSON.parse(items);
+              ss.push(data);
+              localStorage.setItem("cart", JSON.stringify(ss));
+            } else {
+              const ss = [];
+              ss.push(data);
+              localStorage.setItem("cart", JSON.stringify(ss));
+            }
+          });
+          $("#fabric").append(fabric);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+/* Mobile version  */
+@media (max-width: 834px) {
+  header {
+    height: auto;
+  }
+  .page-navigation {
+    display: none;
+  }
+  .homepage {
+    background-image: url(../img/mobile-version.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #myVideo {
+    display: none;
+  }
+  .homepage-content {
+    transform: translateY(40vh);
+  }
+  .homepage-content__heading {
+    font-size: 30px;
+    line-height: 36.01px;
+  }
+  .homepage-content__text,
+  .homepage-link {
+    font-size: 15px;
+    line-height: 18.87px;
+  }
+  .bottom-link {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+  }
+  .bottom-p {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    width: fit-content;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .search {
+    max-width: 100px;
+  }
+  /* search-result-mobile"  */
+  .result-content {
+    max-width: 325px;
+  }
+  .result-content {
+    margin-top: 68px;
+  }
+  .result-item {
+    text-align: center;
+    margin: 0 20px 30px;
+  }
+
+  /* Section Introduction main page  */
+  .intro {
+    flex-direction: column;
+    padding: 0;
+  }
+  .intro-heading {
+    margin-top: 60px;
+    padding: 0 15px;
+  }
+  .intro-col {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  .intro-col p {
+    padding: 0 15px;
+  }
+  .intro-img_1 {
+    margin-bottom: 60px;
+  }
+  .intro-img_2,
+  .intro-img_3,
+  .intro-img_4 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .intro-col:last-child {
+    margin-top: 50px;
+  }
+  .intro-col:last-child p {
+    padding-left: 15px;
+  }
+  /* Footer  */
+  .footer-nav {
+    padding: 0 40px;
+  }
+  .footer-navigation li:nth-child(1) {
+    display: none;
+  }
+  .footer-navigation li {
+    width: 33%;
+  }
+  .toHide {
+    display: block;
+  }
+  /* Parsing page  */
+  .parsing-content__heading {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .parsing-content__text {
+    max-width: 303px;
+    font-size: 15px;
+    line-height: 19px;
+  }
+  .page-info article {
+    max-width: 90%;
+  }
+  .name-date {
+    flex-direction: column;
+  }
+  .number-1 {
+    max-width: 90%;
+  }
+  .number-2 {
+    max-width: 130%;
+    right: -50px;
+  }
+  .description {
+    flex-direction: column;
+  }
+  .description .column {
+    width: 100%;
+  }
+  .mobileShow {
+    display: block;
+  }
+  .mobileHide {
+    display: none;
+  }
+  /* Collection Page  */
+  .all-products {
+    margin: 70px 15px 130px;
+  }
+  .collection-heading {
+    font-size: 20px;
+    line-height: 25.16px;
+    margin-bottom: 16px;
+  }
+  .card {
+    width: 47%;
+  }
+  /* Card-new page  */
+  .back {
+    margin-top: 40px;
+  }
+  .info-box {
+    margin-top: 45px;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .product-card {
+    text-align: center;
+    position: relative;
+    margin-right: 0;
+    width: 100%;
+  }
+  .iframe-gallery-item {
+    display: inline-block;
+  }
+  .iframe-gallery-item iframe {
+    top: 51px;
+  }
+  .right:hover {
+    transform: translate(-30%, -30%) scale(1.5);
+  }
+  .left:hover {
+    transform: translate(30%, -30%) scale(1.5);
+  }
+  .middle:hover {
+    transform: translate(0%, -30%) scale(1.5);
+  }
+  .product-details {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .product-description {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 40px;
+  }
+  .product-description:last-child {
+    margin-top: 60px;
+  }
+  .product-scheme {
+    display: block;
+  }
+  /* Make order page  */
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container .back {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+  .basket-inner {
+    flex-direction: column;
+  }
+  .product {
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 45px;
+  }
+  .product img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .basket-details {
+    width: 100%;
+  }
+  .order-input {
+    width: 100%;
+  }
+  .delivery h3 {
+    display: block;
+  }
+  .sm-btn {
+    width: 45%;
+  }
+  .delivery-inner {
+    flex-direction: column;
+  }
+  .delivery-form,
+  .map {
+    width: 100%;
+  }
+  .pay-icons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .pay-icons img {
+    max-width: 100%;
+    /* padding-right: 6px; */
+    margin: auto;
+  }
+  .pay-icons img:last-child {
+    padding-right: 0;
+    max-width: 20%;
+  }
+
+  /* Last page  */
+  .last-page {
+    height: 70vh;
+  }
+  .last-content h1 {
+    font-size: 20px;
+  }
+  .last-content p {
+    font-size: 15px;
+  }
+}

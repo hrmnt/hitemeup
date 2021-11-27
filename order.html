@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <title>Hit ‘Em Up</title>
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Header starts  -->
+    <header>
+      <div class="discount uppercase lang" key="discount">
+        СКИДКА 10% ПРИ ПОКУПКЕ 2 ТОВАРОВ
+      </div>
+      <nav class="header-nav">
+        <details>
+          <summary class="translate" id="ru">
+            <img
+              id="rus-img"
+              src="img/icons/RU.svg"
+              alt="choose english language"
+            />
+            <span class="lang-option lang" key="rus">ru</span>
+            <div class="lang-arrow"></div>
+          </summary>
+          <p class="translate" id="en">
+            <img
+              id="en-img"
+              src="img/icons/EN.svg"
+              alt="choose english language"
+            /><span class="lang-option lang" key="eng">en</span>
+          </p>
+        </details>
+        <ul class="page-navigation">
+          <li class="">
+            <a
+              href="collections.html"
+              class="uppercase lang nav-links"
+              key="collections"
+              >КОЛЛЕКЦИИ</a
+            >
+          </li>
+          <li class="">
+            <a
+              href="index.html"
+              class="uppercase active lang nav-links"
+              key="home"
+              >ГЛАВНАЯ</a
+            >
+          </li>
+          <li class="">
+            <a
+              href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+              target="_blank"
+              class="uppercase lang nav-links"
+              >INSTAGRAM</a
+            >
+          </li>
+        </ul>
+        <div class="nav-icons">
+          <div class="cart">
+            <a href="order.html">
+              <svg
+                width="19"
+                height="17"
+                viewBox="0 0 19 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 6.07143H15.7736L12.3841 0.294678C12.216 0.00772045 11.8512 -0.0859699 11.5694 0.0865723C11.2882 0.259115 11.1972 0.632036 11.3659 0.919607L14.3888 6.07143H4.61119L7.63407 0.919566C7.80281 0.631995 7.71179 0.259074 7.43056 0.0865315C7.14818 -0.0860107 6.78464 0.0076796 6.6159 0.294637L3.22636 6.07139H0V7.28568H1.28868L2.79711 15.5135C2.95481 16.3751 3.6912 17 4.54822 17H14.4518C15.3088 17 16.0451 16.3751 16.2023 15.5142L17.7112 7.28568H19C19 7.28568 19 6.07143 19 6.07143ZM15.0351 15.2906C14.9829 15.5776 14.7376 15.7857 14.4517 15.7857H4.54822C4.26236 15.7857 4.01711 15.5776 3.96435 15.2901L2.49649 7.28568H16.5035L15.0351 15.2906Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="search">
+            <svg
+              class="search-icon"
+              width="20"
+              height="19"
+              viewBox="0 0 20 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.7488 17.6099L16.5993 14.6189C16.5675 14.5887 16.5267 14.5754 16.4915 14.5509C19.5582 11.0709 19.3754 5.86618 15.9335 2.59712C14.1701 0.922412 11.8254 0 9.33183 0C6.83803 0 4.49348 0.922412 2.73022 2.59712C-0.910074 6.05461 -0.910074 11.6804 2.73022 15.1374C4.49348 16.8127 6.83803 17.7351 9.33183 17.7351C11.5459 17.7351 13.64 17.0047 15.3163 15.6693C15.3418 15.7024 15.3556 15.7406 15.387 15.7704L18.5365 18.7614C18.7039 18.9204 18.9233 19 19.1427 19C19.3621 19 19.5818 18.9205 19.7489 18.7614C20.0837 18.4433 20.0837 17.928 19.7488 17.6099ZM9.33183 16.1065C7.29589 16.1065 5.382 15.3532 3.94251 13.986C0.970866 11.1636 0.970866 6.5716 3.94251 3.74864C5.382 2.38132 7.29601 1.62859 9.33183 1.62859C11.3674 1.62859 13.2816 2.38132 14.7211 3.74853C17.6928 6.57149 17.6928 11.1635 14.7211 13.9859C13.2814 15.3531 11.3675 16.1065 9.33183 16.1065Z"
+                fill="white"
+              />
+            </svg>
+            <div class="search-input invisic">
+              <input type="text" placeholder="" id="this-search" />
+            </div>
+            <p class="close-text uppercase invisic">ЗАКРЫТЬ</p>
+            <svg
+              class="close invisic"
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.28261 7.0001L13.7339 1.54851C14.0887 1.1939 14.0887 0.620557 13.7339 0.265953C13.3793 -0.088651 12.806 -0.088651 12.4514 0.265953L6.99992 5.71755L1.5486 0.265953C1.19384 -0.088651 0.620668 -0.088651 0.266072 0.265953C-0.0886906 0.620557 -0.0886906 1.1939 0.266072 1.54851L5.71739 7.0001L0.266072 12.4517C-0.0886906 12.8063 -0.0886906 13.3797 0.266072 13.7343C0.442789 13.9111 0.675145 14 0.907335 14C1.13953 14 1.37172 13.9111 1.5486 13.7343L6.99992 8.28266L12.4514 13.7343C12.6283 13.9111 12.8605 14 13.0927 14C13.3249 14 13.557 13.9111 13.7339 13.7343C14.0887 13.3797 14.0887 12.8063 13.7339 12.4517L8.28261 7.0001Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </nav>
+      <div class="search-result">
+        <h3 class="uppercase">АКТУАЛЬНОЕ</h3>
+        <div class="result-content">
+          <div class="result-item">
+            <img src="img/search-pic./Худи.jpg" alt="Hoodies" />
+            <a class="uppercase" href="#">ХУДИ</a>
+          </div>
+          <div class="result-item">
+            <img src="img/search-pic./Футболки.jpg" alt="T-Shirts" />
+            <a class="uppercase" href="#">ФУТБОЛКИ</a>
+          </div>
+          <div class="result-item">
+            <img src="img/search-pic./Новинки.jpg" alt="New arrival" />
+            <a class="uppercase" href="collections.html">НОВИНКИ</a>
+          </div>
+          <div class="result-item">
+            <img src="img/search-pic./Коллекции.jpg" alt="Collections" />
+            <a class="uppercase" href="collections.html">КОЛЛЕКЦИИ</a>
+          </div>
+          <div class="result-item">
+            <img src="img/search-pic./История.jpg" alt="Brang history" />
+            <a class="uppercase" href="parsing.html">ИСТОРИЯ</a>
+          </div>
+        </div>
+      </div>
+      <div class="cart-window">
+        <div class="all-added-products">
+          <img class="added-product" src="img/1.jpg" alt="" />
+          <!-- <img class="added-product" src="img/1.jpg" alt="" /> -->
+          <!-- <img class="added-product" src="img/1.jpg" alt="" /> -->
+        </div>
+        <p>Изделие добавлено в корзину</p>
+        <button class="ok-btn lg-btn delivery-opt">ОК</button>
+      </div>
+      <!-- For mobiles  -->
+
+      <div class="cover"></div>
+      <div class="logo">
+        <a href="index.html"
+          ><img class="logo-img" src="img/HIT'EM UP Logo.svg" alt=""
+        /></a>
+      </div>
+      <div class="search-result-mobile">
+        <hr />
+        <div class="result-content">
+          <a href="index.html" class="result-item">
+            <img src="img/search-pic./ГЛАВНАЯ.jpg" alt="Main page" />
+            <p class="uppercase">ГЛАВНАЯ</p>
+          </a>
+          <a class="result-item" href="collections.html">
+            <img src="img/search-pic./Коллекции.jpg" alt="Collections" />
+            <p class="uppercase">КОЛЛЕКЦИИ</p>
+          </a>
+          <a
+            class="result-item"
+            href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+            target="_blank"
+          >
+            <img src="img/search-pic./instagram.jpg" alt="T-Shirts" />
+            <p class="uppercase">INSTAGRAM</p>
+          </a>
+          <a class="result-item" href="collections.html">
+            <img src="img/search-pic./Новинки.jpg" alt="New arrival" />
+            <p class="uppercase">НОВИНКИ</p>
+          </a>
+          <a class="result-item" href="parsing.html">
+            <img src="img/search-pic./История.jpg" alt="Brang history" />
+            <p class="uppercase">ИСТОРИЯ</p>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <a href="index.html" class="back mobileShow">
+        <svg
+          width="8"
+          viewBox="0 0 8 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.30809e-05 6.85008C2.30911e-05 6.61709 0.0924628 6.38413 0.276954 6.2065L6.08542 0.616782C6.45491 0.261203 7.05397 0.261203 7.42331 0.616782C7.79265 0.972217 7.79265 1.54861 7.42331 1.90422L2.28366 6.85008L7.42313 11.796C7.79247 12.1515 7.79247 12.7279 7.42313 13.0833C7.05379 13.439 6.45473 13.439 6.08524 13.0833L0.276774 7.49365C0.0922534 7.31593 2.30707e-05 7.08298 2.30809e-05 6.85008Z"
+            fill="black"
+          />
+        </svg>
+        <span class="uppercase lang" key="back2">ВЕРНУТЬСЯ</span>
+      </a>
+      <section class="information">
+        <h3 class="page-heading uppercase lang" key="inf">ИНФОРМАЦИЯ</h3>
+        <ol>
+          <li class="lang" key="li1">
+            Выполните выбор кол-ва изделия (Внимательно проверяйте информацию)
+          </li>
+          <li class="lang" key="li2">Выберете способ доставки изделия</li>
+          <li class="lang" key="li3">Заполните данные раздела оплаты</li>
+          <li class="lang" key="li4">Произведите оплату изделия</li>
+          <li class="lang" key="li5">
+            Ожидайте обратную связь от нашего специалиста для уточнения заказа
+          </li>
+          <li class="lang" key="li6">
+            В случае возникновения вопросов - свяжетесь с HIT ‘EM UP
+          </li>
+        </ol>
+        <p class="lang" key="ddl">
+          Срок доставки изделия зависит от раздела коллекции и адреса доставки.
+        </p>
+        <p class="lang" key="day">В среднем доставка занимает 3-4 дня</p>
+      </section>
+      <section id="basket" class="basket">
+        <h3 class="page-heading uppercase lang" key="cart">КОРЗИНА</h3>
+        <!-- <div class="basket-inner">
+          <svg
+            class="close-basket"
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.28261 7.0001L13.7339 1.54851C14.0887 1.1939 14.0887 0.620557 13.7339 0.265953C13.3793 -0.088651 12.806 -0.088651 12.4514 0.265953L6.99992 5.71755L1.5486 0.265953C1.19384 -0.088651 0.620668 -0.088651 0.266072 0.265953C-0.0886906 0.620557 -0.0886906 1.1939 0.266072 1.54851L5.71739 7.0001L0.266072 12.4517C-0.0886906 12.8063 -0.0886906 13.3797 0.266072 13.7343C0.442789 13.9111 0.675145 14 0.907335 14C1.13953 14 1.37172 13.9111 1.5486 13.7343L6.99992 8.28266L12.4514 13.7343C12.6283 13.9111 12.8605 14 13.0927 14C13.3249 14 13.557 13.9111 13.7339 13.7343C14.0887 13.3797 14.0887 12.8063 13.7339 12.4517L8.28261 7.0001Z"
+              fill="black"
+            />
+          </svg>
+          <div class="product">
+            <h4 class="bold lang" key="product">Товар</h4>
+            <img src="img/collections/1.jpg" alt="Choosen product image" />
+            <table class="control">
+              <tr>
+                <td class="box"><span class="minus"></span></td>
+                <td class="box"><span class="quantity">1</span></td>
+                <td class="box">
+                  <span class="minus"></span><span class="plus"></span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="basket-details">
+            <div class="product-details">
+              <div class="product-description">
+                <h4 class="boldlang lang" key="inf">Информация</h4>
+                <p>
+                  <span class="bold lang" key="tshirt">Футболка</span> «All Eyez
+                  on Me » / <span class="lang" key="unisex">Унисекс</span>
+                </p>
+                <p>
+                  <span class="bold lang" key="fabric">Ткань</span>:<span
+                    class="lang"
+                    key="footer"
+                    >Футер 2-х нитка</span
+                  >
+                </p>
+                <p>
+                  <span class="bold lang" key="comp">Состав</span>:
+                  <span class="lang" key="cotton">95% хлопка / 5% лайкеры</span>
+                </p>
+                <p>
+                  <span class="bold lang" key="size">Размер</span>:
+                  <span class="lang" key="oversize">оверсайз</span>
+                </p>
+
+                <span class="bold lang" key="height"
+                  >Модель представлена на рост</span
+                >:
+                <ul>
+                  <li>170-180</li>
+                  <li>180-190</li>
+                </ul>
+              </div>
+              <div class="product-description">
+                <h4 class="bold lang" key="price">Цена</h4>
+                <span class="bold uppercase">СУММА</span>
+              </div>
+            </div>
+            <span class="bold lang" key="det"
+              >Укажите необходимую длину изделия (Под Ваш рост)</span
+            >
+            <br />
+            <input
+              class="order-input"
+              type="text"
+              placeholder="Введите значение"
+            />
+          </div>
+        </div> -->
+      </section>
+      <section class="form">
+        <h3 class="page-heading uppercase lang" key="form">ЗАПОЛНИТЕ АНКЕТУ</h3>
+        <p class="lang" key="need">
+          Это необходимо для обработки Вашего заказа и уточнения более точной
+          информации при необходимости
+        </p>
+        <form action="#">
+          <label class="lang" key="name" for="customer-name">Имя</label>
+          <input type="text" id="customer-name" />
+          <label class="lang" key="sname" for="second-name">Фамилия</label>
+          <input type="text" id="second-name" />
+          <label class="lang" key="post" for="email">Почта</label>
+          <input type="email" id="email" />
+          <label class="lang" key="prname" for="choosen-product"
+            >Наименование товара</label
+          >
+          <input type="text" id="choosen-product" />
+        </form>
+      </section>
+      <section class="delivery">
+        <h3 class="page-heading uppercase lang" key="delivery">ДОСТАВКА</h3>
+        <div id="delivery-wrap">
+          <!-- <button class="delivery-opt sm-btn lang" type="button" key="cdek">
+            СДЭК
+          </button>
+          <button class="delivery-opt sm-btn lang" type="button" key="rp">
+            ПОЧТА РФ
+          </button> -->
+        </div>
+        <div class="delivery-inner">
+          <form action="#" class="delivery-form">
+            <label class="lang" key="city" for="city">Напишите Ваш город</label>
+            <input type="text" id="city" />
+            <!-- <label class="lang" key="city-point" for="delivery-location"
+              >Выберете пункт выдачи</label
+            >
+            <input type="text" id="delivery-location" /> -->
+            <button
+              class="delivery-opt lg-btn lang mobileHide"
+              key="calc"
+              id="calc"
+            >
+              ПРОИЗВЕСТИ РАСЧЕТ
+            </button>
+            <a
+              href="collections.html"
+              class="delivery-opt lg-btn lang mobileHide"
+              key="cont"
+            >
+              ПРОДОЛЖИТЬ ПОКУПКИ
+            </a>
+          </form>
+          <div class="map">
+            <div style="position: relative; overflow: hidden">
+              <a
+                href="https://yandex.ru/maps/65/novosibirsk/search/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%20cl'r/?utm_medium=mapframe&utm_source=maps"
+                style="
+                  color: #eee;
+                  font-size: 12px;
+                  position: absolute;
+                  top: 0px;
+                "
+                >Новосибирск cl'r в Новосибирске</a
+              ><a
+                href="https://yandex.ru/maps/65/novosibirsk/?utm_medium=mapframe&utm_source=maps"
+                style="
+                  color: #eee;
+                  font-size: 12px;
+                  position: absolute;
+                  top: 14px;
+                "
+                >Новосибирск</a
+              ><iframe
+                src="https://yandex.ru/map-widget/v1/-/CCUqbNxyKC"
+                width="560"
+                height="400"
+                frameborder="1"
+                allowfullscreen="true"
+                style="position: relative"
+              ></iframe>
+            </div>
+          </div>
+          <button
+            class="delivery-opt lg-btn lang mobileShow"
+            key="calc"
+            id="calc"
+          >
+            ПРОИЗВЕСТИ РАСЧЕТ
+          </button>
+          <a
+            href="collections.html"
+            class="delivery-opt lg-btn lang mobileShow"
+            key="cont"
+          >
+            ПРОДОЛЖИТЬ ПОКУПКИ
+          </a>
+        </div>
+        <div class="pay-icons">
+          <img
+            src="img/icons/cash-on-delivery.svg"
+            alt="cash-on-delivery icon"
+          />
+          <img src="img/icons/io-min.svg" alt="io icon" />
+          <img src="img/icons/MIR.svg" alt="mir icon" />
+          <img src="img/icons/Mastercard.svg" alt="mastercard icon" />
+          <img src="img/icons/VISA.svg" alt="visa icon" />
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer  -->
+    <footer>
+      <nav class="footer-nav">
+        <a
+          class="uppercase toHide lang"
+          key="follow"
+          href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+          target="_blank"
+          >ПОДПИСАТЬСЯ НА HIT EM UP</a
+        >
+        <ul class="footer-navigation">
+          <li>
+            <a
+              href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+              class="uppercase lang"
+              key="follow"
+              target="_blank"
+              >ПОДПИСАТЬСЯ НА HIT EM UP</a
+            >
+          </li>
+          <li>
+            <a href="collections.html" class="uppercase lang" key="collections"
+              >КОЛЛЕКЦИИ</a
+            >
+          </li>
+          <li>
+            <a class="uppercase lang" key="new" href="collections.html#new"
+              >НОВИНКИ</a
+            >
+          </li>
+          <li>
+            <a href="parsing.html" class="uppercase lang" key="parsing"
+              >РАЗБОР</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script src="js/translation.js"></script>
+    <!-- <script src="js/rellax.min.js"></script> -->
+    <script src="js/script.js"></script>
+    <script>
+      $(document).ready(() => {
+        const name = $("#customer-name").val();
+        const surname = $("#second-name").val();
+        const email = $("#email").val();
+        const product = $("#choosen-product").val();
+        const city = $("#city").val();
+
+        let delivery = "";
+        const url = "http://localhost:3000/api";
+
+        $.get(`${url}/order/delivery`, (data) => {
+          data.map((s) => {
+            delivery += `   <button id="${s._id}" class="delivery-opt sm-btn lang" type="button" key="cdek">
+            ${s.name}
+          </button>`;
+          });
+          $("#delivery-wrap").append(delivery);
+        });
+        let busket = "";
+        const lang = getLanguage();
+        const isEng = lang === "en";
+        const ss = localStorage.getItem("cart");
+        JSON.parse(ss).map((s) => {
+          busket += ` <div class="basket-inner">
+          <svg
+            class="close-basket"
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.28261 7.0001L13.7339 1.54851C14.0887 1.1939 14.0887 0.620557 13.7339 0.265953C13.3793 -0.088651 12.806 -0.088651 12.4514 0.265953L6.99992 5.71755L1.5486 0.265953C1.19384 -0.088651 0.620668 -0.088651 0.266072 0.265953C-0.0886906 0.620557 -0.0886906 1.1939 0.266072 1.54851L5.71739 7.0001L0.266072 12.4517C-0.0886906 12.8063 -0.0886906 13.3797 0.266072 13.7343C0.442789 13.9111 0.675145 14 0.907335 14C1.13953 14 1.37172 13.9111 1.5486 13.7343L6.99992 8.28266L12.4514 13.7343C12.6283 13.9111 12.8605 14 13.0927 14C13.3249 14 13.557 13.9111 13.7339 13.7343C14.0887 13.3797 14.0887 12.8063 13.7339 12.4517L8.28261 7.0001Z"
+              fill="black"
+            />
+          </svg>
+          <div class="product">
+            <h4 class="bold lang" key="product">Товар</h4>
+            <img src="${url}${s.images[0]}" alt="Choosen product image" />
+            <table class="control">
+              <tr>
+                <td class="box"><span class="minus"></span></td>
+                <td class="box"><span class="quantity">1</span></td>
+                <td class="box">
+                  <span class="minus"></span><span class="plus"></span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="basket-details">
+            <div class="product-details">
+              <div class="product-description">
+                <h4 class="boldlang lang" key="inf">Информация</h4>
+                <p>
+                  <span class="bold lang" key="tshirt">${
+                    s.clothType[isEng ? "name_en" : "name_ru"]
+                  }</span> 
+                  <span id="clothName">${
+                    s[isEng ? "name_en" : "name_ru"]
+                  }</span>/ <span class="lang" key="unisex">Унисекс</span>
+                </p>
+                <p>
+                  <span class="bold lang" key="fabric">Ткань</span>:
+                  ${s.cloth.map((sa) => {
+                    return `
+                     <span class="lang" key="footer">
+                        ${sa[isEng ? "name_en" : "name_ru"]}
+                      </span><br/>`;
+                  })}
+                </p>
+                <p>
+                  <span class="bold lang" key="size">Размер</span>:
+                  <span class="lang" key="oversize">${
+                    s.size[isEng ? "name_en" : "name_ru"]
+                  }</span>
+                </p>
+
+                <span class="bold lang" key="height"
+                  >Модель представлена на рост</span
+                >:
+                <ul>
+                  <li>${s.modelHeightMan}</li>
+                  <li>${s.modelHeightGirl}</li>
+                </ul>
+              </div>
+              <div class="product-description">
+                <h4 class="bold lang" key="price">Цена</h4>
+                <span class="bold uppercase">${s.price}</span>
+              </div>
+            </div>
+            <span class="bold lang" key="det"
+              >Укажите необходимую длину изделия (Под Ваш рост)</span
+            >
+            <br />
+            <input
+              class="order-input"
+              type="text"
+              id="${s._id}"
+              placeholder="Введите значение"
+            />
+          </div>
+        </div>`;
+        });
+        $("#basket").append(busket);
+        $(".lang").each(function (index, item) {
+          console.log(this, arrLang[lang]);
+          if (lang === "en") {
+            document.getElementById("rus-img").src = "img/icons/EN.svg";
+            document.getElementById("en-img").src = "img/icons/RU.svg";
+          }
+          $(this).text(arrLang[lang][$(this).attr("key")]);
+        });
+
+        $("#calc").click(() => {
+          console.log(name, surname);
+        });
+      });
+    </script>
+  </body>
+</html>

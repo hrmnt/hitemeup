@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <title>Parsing page</title>
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Header starts  -->
+    <header>
+      <div class="discount uppercase lang" key="discount">
+        СКИДКА 10% ПРИ ПОКУПКЕ 2 ТОВАРОВ
+      </div>
+      <nav class="header-nav">
+        <details>
+          <summary class="translate" id="ru">
+            <img
+              id="rus-img"
+              src="img/icons/RU.svg"
+              alt="choose english language"
+            />
+            <span  class="lang-option lang" key="rus">ru</span>
+            <div class="lang-arrow"></div>
+          </summary>
+          <p class="translate" id="en">
+            <img
+              id="en-img"
+              src="img/icons/EN.svg"
+              alt="choose english language"
+            /><span class="lang-option lang" key="eng">en</span>
+          </p>
+        </details>
+        <ul class="page-navigation">
+          <li class="">
+            <a
+              href="collections.html"
+              class="uppercase lang nav-links"
+              key="collections"
+              >КОЛЛЕКЦИИ</a
+            >
+          </li>
+          <li class="">
+            <a
+              href="index.html"
+              class="uppercase active lang nav-links"
+              key="home"
+              >ГЛАВНАЯ</a
+            >
+          </li>
+          <li class="">
+            <a
+              href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+              target="_blank"
+              class="uppercase lang nav-links"
+              >INSTAGRAM</a
+            >
+          </li>
+        </ul>
+        <div class="nav-icons">
+          <div class="cart">
+            <a href="order.html">
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 6.07143H15.7736L12.3841 0.294678C12.216 0.00772045 11.8512 -0.0859699 11.5694 0.0865723C11.2882 0.259115 11.1972 0.632036 11.3659 0.919607L14.3888 6.07143H4.61119L7.63407 0.919566C7.80281 0.631995 7.71179 0.259074 7.43056 0.0865315C7.14818 -0.0860107 6.78464 0.0076796 6.6159 0.294637L3.22636 6.07139H0V7.28568H1.28868L2.79711 15.5135C2.95481 16.3751 3.6912 17 4.54822 17H14.4518C15.3088 17 16.0451 16.3751 16.2023 15.5142L17.7112 7.28568H19C19 7.28568 19 6.07143 19 6.07143ZM15.0351 15.2906C14.9829 15.5776 14.7376 15.7857 14.4517 15.7857H4.54822C4.26236 15.7857 4.01711 15.5776 3.96435 15.2901L2.49649 7.28568H16.5035L15.0351 15.2906Z"
+                fill="white"
+              />
+            </svg>
+            </a>
+          </div>
+
+          <div class="search">
+            <svg
+              class="search-icon"
+              width="20"
+              height="19"
+              viewBox="0 0 20 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.7488 17.6099L16.5993 14.6189C16.5675 14.5887 16.5267 14.5754 16.4915 14.5509C19.5582 11.0709 19.3754 5.86618 15.9335 2.59712C14.1701 0.922412 11.8254 0 9.33183 0C6.83803 0 4.49348 0.922412 2.73022 2.59712C-0.910074 6.05461 -0.910074 11.6804 2.73022 15.1374C4.49348 16.8127 6.83803 17.7351 9.33183 17.7351C11.5459 17.7351 13.64 17.0047 15.3163 15.6693C15.3418 15.7024 15.3556 15.7406 15.387 15.7704L18.5365 18.7614C18.7039 18.9204 18.9233 19 19.1427 19C19.3621 19 19.5818 18.9205 19.7489 18.7614C20.0837 18.4433 20.0837 17.928 19.7488 17.6099ZM9.33183 16.1065C7.29589 16.1065 5.382 15.3532 3.94251 13.986C0.970866 11.1636 0.970866 6.5716 3.94251 3.74864C5.382 2.38132 7.29601 1.62859 9.33183 1.62859C11.3674 1.62859 13.2816 2.38132 14.7211 3.74853C17.6928 6.57149 17.6928 11.1635 14.7211 13.9859C13.2814 15.3531 11.3675 16.1065 9.33183 16.1065Z"
+                fill="white"
+              />
+            </svg>
+            <div class="search-input invisic">
+              <input type="text" placeholder="" id="this-search" />
+            </div>
+            <p class="close-text uppercase invisic">ЗАКРЫТЬ</p>
+            <svg
+              class="close invisic"
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.28261 7.0001L13.7339 1.54851C14.0887 1.1939 14.0887 0.620557 13.7339 0.265953C13.3793 -0.088651 12.806 -0.088651 12.4514 0.265953L6.99992 5.71755L1.5486 0.265953C1.19384 -0.088651 0.620668 -0.088651 0.266072 0.265953C-0.0886906 0.620557 -0.0886906 1.1939 0.266072 1.54851L5.71739 7.0001L0.266072 12.4517C-0.0886906 12.8063 -0.0886906 13.3797 0.266072 13.7343C0.442789 13.9111 0.675145 14 0.907335 14C1.13953 14 1.37172 13.9111 1.5486 13.7343L6.99992 8.28266L12.4514 13.7343C12.6283 13.9111 12.8605 14 13.0927 14C13.3249 14 13.557 13.9111 13.7339 13.7343C14.0887 13.3797 14.0887 12.8063 13.7339 12.4517L8.28261 7.0001Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </nav>
+      <div class="search-result">
+        <h3 class="uppercase lang" key="relevant">АКТУАЛЬНОЕ</h3>
+        <div class="result-content">
+          <a class="result-item" href="collections.html#to-order">
+            <img src="img/search-pic./Худи.jpg" alt="Hoodies" />
+            <p class="uppercase lang" key="hoodie" 
+              >ХУДИ</p>
+          </a>
+          <a class="result-item" href="collections.html#in-stock">
+            <img src="img/search-pic./Футболки.jpg" alt="T-Shirts" />
+            <p class="uppercase lang" key="tshirt" 
+              >ФУТБОЛКИ</p>
+          </a>
+          <a class="result-item" href="collections.html#new">
+            <img src="img/search-pic./Новинки.jpg" alt="New arrival" />
+            <p class="uppercase lang" key="new" 
+              >НОВИНКИ</p>
+          </a>
+          <a class="result-item" href="collections.html">
+            <img src="img/search-pic./Коллекции.jpg" alt="Collections" />
+            <p class="uppercase lang" key="collections" 
+              >КОЛЛЕКЦИИ</p
+            >
+          </a>
+          <a class="result-item" href="parsing.html">
+            <img src="img/search-pic./История.jpg" alt="Brang history" />
+            <p class="uppercase lang" key="bkg" >ИСТОРИЯ</p>
+          </a>
+        </div>
+      </div>
+      <div class="cart-window">
+        <div class="all-added-products">
+          <img class="added-product" src="img/1.jpg" alt="" />
+          <!-- <img class="added-product" src="img/1.jpg" alt="" /> -->
+          <!-- <img class="added-product" src="img/1.jpg" alt="" /> -->
+        </div>
+        <p>Изделие добавлено в корзину</p>
+        <button class="ok-btn lg-btn delivery-opt">ОК</button>
+      </div>
+      <!-- For mobiles  -->
+
+      <div class="cover"></div>
+      <div class="logo">
+        <a href="index.html"
+          ><img class="logo-img" src="img/HIT'EM UP Logo.svg" alt=""
+        /></a>
+      </div>
+      <div class="search-result-mobile">
+        <hr />
+        <div class="result-content">
+          <a href="index.html" class="result-item">
+            <img src="img/search-pic./ГЛАВНАЯ.jpg" alt="Main page" />
+            <p class="uppercase">ГЛАВНАЯ</p>
+          </a>
+          <a class="result-item" href="collections.html">
+            <img src="img/search-pic./Коллекции.jpg" alt="Collections" />
+            <p class="uppercase">КОЛЛЕКЦИИ</p>
+          </a>
+          <a
+            class="result-item"
+            href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+            target="_blank"
+          >
+            <img src="img/search-pic./instagram.jpg" alt="T-Shirts" />
+            <p class="uppercase">INSTAGRAM</p>
+          </a>
+          <a class="result-item" href="collections.html">
+            <img src="img/search-pic./Новинки.jpg" alt="New arrival" />
+            <p class="uppercase">НОВИНКИ</p>
+          </a>
+          <a class="result-item" href="parsing.html">
+            <img src="img/search-pic./История.jpg" alt="Brang history" />
+            <p class="uppercase">ИСТОРИЯ</p>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- Main  -->
+    <main class="parsing">
+      <div class="overlay"></div>
+      <div class="parsing-content">
+        <h1 class="parsing-content__heading">Parsing prints</h1>
+        <p class="parsing-content__text lang" key="parsing-text">
+          Здесь Вы сможете изучить заложенную историю, отсылки и пасхалки из
+          жизни личностей, которых мы расположили и оформили на наших изделия.
+        </p>
+      </div>
+    </main>
+    <!-- Contetn of this page  -->
+    <section class="page-info">
+      <img src="img/01.png" alt="" class="decor-number number-1" />
+      <article>
+        <div class="name-date">
+          <div>
+            <p>
+              <span class="lang bold" key="pars-1"
+                >Разбор иллюстрации, изображенной на изделиях из
+                коллекции:</span
+              ><br />
+              Section 2
+            </p>
+            <p>
+              <span class="bold lang" key="tshirt">Футболки </span> &<span
+                class="lang bold"
+                key="hoodie"
+                >Худи</span
+              >
+              : Tyson
+            </p>
+          </div>
+          <div>
+            <p>
+              Est. March, 2021 / Section 2 <br />
+              <span class="lang" key="release"
+                >Дата релиза данного изделия</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="description">
+          <div class="column">
+            <img src="img/1.jpg" alt="T-shirt print example" />
+            <div class="iframe-container mobileShow">
+              <iframe
+                src="https://www.youtube.com/embed/ZW5mvN1segc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              <span class="uppercase"
+                >TRIUMPH IN THE WORLD OF BOXING · BY MERSI</span
+              >
+              <br />
+              <span class="lang" key="empty">Триумф в мире бокса</span>
+            </p>
+            <p>
+              The Hit 'Em Up Magazine<br />
+              <span class="lang" key="reference">Отсылка к журналу: </span> «The
+              New York Times Magazine»
+            </p>
+            <p>
+              Boxing Legend forever<br />
+              <span class="lang" key="empty">Легенда Бокса навсегда</span>
+            </p>
+            <p>
+              Mike Tyson.<br />
+              Shortest fight 1986 - 30 seconds<br />
+              <span class="lang" key="empty"
+                >Майк Тайсон.<br />
+                Самый короткий бой 1986 года - за 30 секунд</span
+              >
+            </p>
+            <p>
+              Iron tiger.<br />
+              Iron Mike's best friend<br />
+              <span class="lang" key="empty"
+                >Железный тигр(отсылка к прозвищу Майка).<br />
+                Железный Майк и Железный тигр лучшие друзья</span
+              >
+            </p>
+          </div>
+          <div class="column">
+            <div class="iframe-container mobileHide">
+              <iframe
+                src="https://www.youtube.com/embed/ZW5mvN1segc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              A vegetarian who has bit off an opponent's ear.<br />
+              <span class="lang" key="empty"
+                >Вегетарианец откусивший ухо сопернику</span
+              ><br />
+              <span class="lang" key="vegy-1"
+                >В июне 1997 года в Лас-Вегасе состоялся реванш супер
+                тяжеловесов Майка Тайсона и Эвандера Холифилда.</span
+              >
+              <br />
+              <span class="lang" key="vegy-2"
+                >Бой завершился дисквалификацией “Железного Майка”, он откусил
+                кусок уха Холифилду.</span
+              >
+            </p>
+            <p>
+              "Wish I had 5 seconds in the ring with Tupac's killer".<br />
+              <span class="lang" key="empty"
+                >«Жаль у меня не было 5 секунд на ринге с убийцей Тупака».<br
+              /></span>
+              <span class="lang" key="shot"
+                >Тасйон и Тупак были хорошими друзьями. После победы Майка в
+                бою, 7 сентября 1996 года, они собирались ехать в клуб
+                праздновать победу. В этот вечер автомобиль, в котором
+                находились Шуг Найт и Тупак Шакур, расстреляли.</span
+              >
+            </p>
+            <p class="lang" key="fight">Все бои Майка Тайсона</p>
+            <p >
+              Sept. 7, 1996 - Bruce Seldon, Las Vegas, TKO 1<br /><span class="lang" key="cuba">Дата выделена красно-чёрным градиентом, с отсылкой к теории «7
+              дней», в которой гласится, что Пак спланировал своё покушение, и
+              сейчас находится на Кубе.</span>
+              
+            </p>
+          </div>
+        </div>
+        <img
+          class="poster"
+          src="img/Post-1.jpg"
+          alt="Poster for this article"
+        />
+        <a
+          class="uppercase lang"
+          href="https://www.instagram.com/p/CR6Ly6Jo8v_/"
+          target="_blank"
+          key="insta"
+          >ПРЕЗЕНТАЦИЯ В INSTAGRAM</a
+        >
+      </article>
+      <img src="img/02.png" alt="" class="decor-number number-2" />
+      <article>
+        <div class="name-date">
+          <div>
+            <p>
+              <span class="lang bold" key="pars-1"
+                >Разбор иллюстрации, изображенной на изделиях из
+                коллекции:</span
+              ><br />
+              Section 1
+            </p>
+            <p>
+              <span class="bold lang" key="tshirt">Футболки </span> &<span
+                class="lang bold"
+                key="hoodie"
+                >Худи</span
+              >: “Suge & Tupac & Snoop”
+            </p>
+          </div>
+          <div>
+            <p>
+              Est. march, 2021 / Section 1<br />
+              <span class="lang" key="release"
+                >Дата релиза данного изделия</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="description">
+          <div class="column">
+            <img src="img/2.jpg" alt="T-shirt print example" />
+            <div class="iframe-container mobileShow">
+              <iframe
+                src="https://www.youtube.com/embed/K8phn7a7cF0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              <span class="uppercase"
+                >THE TRIUMPH OF LIBERALISM (NO KIDDING) · BY MERSI</span
+              >
+              <br />
+              <span class="lang" key="empty"
+                >Торжество либерализма (без шуток)</span
+              >
+            </p>
+            <p>
+              <span class="lang" key="reference">Отсылка к журналу: </span> «The
+              New York Times Magazine»
+            </p>
+            <p class="lang" key="trace">
+              Так же в артикле “The” от буквы “T” стекает след баллончика от
+              краски – Данный объект показывает след баллончика от граффити –
+              который олицетворяет: Бизнес и андеграунд / Деловитость и улица /
+              Классика и хип-хоп / На оригинальном журнале этого нет.
+            </p>
+            <p>
+              If 10 P.M.<br />
+              Do you know whose music your children are listening to?<br />
+              <span class="lang" key="empty"
+                >Ты знаешь чью музыку слушают твои дети в 10:00 вечера?</span
+              >
+            </p>
+          </div>
+          <div class="column">
+            <div class="iframe-container mobileHide">
+              <iframe
+                src="https://www.youtube.com/embed/K8phn7a7cF0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              The godfather of gangsta rap, and his family values.<br />
+              By Lynn Hirschberg<br />
+              <span class="lang" key="empty"
+                >Крестный отец Гэнгста-Рэпа со своими семейными ценностями</span
+              >
+            </p>
+            <p>
+              Tupac Shakur.<br />
+              Rap star, convicted felon<br />
+
+              <span class="lang" key="felon"
+                >Тупак Шакур<br />Рэп звезда, осуждённый преступник<br />
+                (тремя месяцами ранее Тупак был освобожден из-под стражи по делу
+                об изнасиловании.<br />
+                За него внесли залог в размере 1.4 млн$).</span
+              >
+            </p>
+            <p>
+              Suge Knigt.<br />
+              C.E.O. Death Row Records<br />
+              <span class="lang" key="empty"
+                >Шуг Найт<br />
+                Генеральный директор Death Row Records</span
+              >
+            </p>
+            <p>
+              Snoop Doggy Dog.<br />
+
+              <span class="lang" key="murder">
+                Снуп Догг<br />Рэп звезда, под судом<br />
+                (на момент публикации журнала, Снуп проходил по делу убийства
+                бойца враждебной группировки Филиппа Волдемариама)</span
+              >
+            </p>
+          </div>
+        </div>
+        <img
+          class="poster"
+          src="img/Post-2.jpg"
+          alt="Poster for this article"
+        />
+        <a
+          class="uppercase lang"
+          key="insta"
+          href="https://www.instagram.com/p/CST73r9oZwq/"
+          target="_blank"
+          >ПРЕЗЕНТАЦИЯ В INSTAGRAM</a
+        >
+
+        <p class="to-be-continue uppercase lang" key="continue">
+          ПРОДОЛЖЕНИЕ СЛЕДУЕТ ...
+        </p>
+      </article>
+    </section>
+    <!-- Footer  -->
+    <footer>
+      <nav class="footer-nav">
+        <a
+          class="uppercase toHide lang"
+          key="follow"
+          href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+          target="_blank"
+          >ПОДПИСАТЬСЯ НА HIT EM UP</a
+        >
+        <ul class="footer-navigation">
+          <li>
+            <a
+              href="https://instagram.com/hitemup.ru?utm_medium=copy_link"
+              class="uppercase lang"
+              key="follow"
+              target="_blank"
+              >ПОДПИСАТЬСЯ НА HIT EM UP</a
+            >
+          </li>
+          <li>
+            <a href="collections.html" class="uppercase lang" key="collections"
+              >КОЛЛЕКЦИИ</a
+            >
+          </li>
+          <li>
+            <a class="uppercase lang" key="new" href="collections.html#new"
+              >НОВИНКИ</a
+            >
+          </li>
+          <li>
+            <a href="parsing.html" class="uppercase lang" key="parsing"
+              >РАЗБОР</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="js/translation.js"></script>
+    <!-- <script src="js/rellax.min.js"></script> -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
