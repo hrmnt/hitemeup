@@ -277,7 +277,7 @@ $(document).ready(function () {
       const noitems =
         lang === "en" ? `<p>No items in cart</p>` : `<p>Корзина пуста</p>`;
       $("#cart-result").css("display", "block");
-      if (JSON.parse(items).length > 0) {
+      if (items && JSON.parse(items).length > 0) {
         $("#cart-result").append(text);
       } else {
         $("#cart-result").append(noitems);
