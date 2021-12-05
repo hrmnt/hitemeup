@@ -267,21 +267,20 @@ $(document).ready(function () {
 
   $("#cart-icon").hover(
     () => {
-      console.log("GOVER");
       const items = localStorage.getItem("cart");
-      const text =
-        lang === "en" && items
-          ? `<p>In cart ${JSON.parse(items).length} items</p>`
-          : `<p>в корзине ${JSON.parse(items).length} вещей</p>`;
 
-      const noitems =
-        lang === "en" ? `<p>No items in cart</p>` : `<p>Корзина пуста</p>`;
-
-      console.log(items);
       $("#cart-result").css("display", "block");
       if (items && JSON.parse(items).length > 0) {
+        const text =
+          lang === "en"
+            ? `<p>In cart ${JSON.parse(items).length} items</p>`
+            : `<p>в корзине ${JSON.parse(items).length} вещей</p>`;
+
         $("#cart-result").append(text);
       } else {
+        const noitems =
+          lang === "en" ? `<p>No items in cart</p>` : `<p>Корзина пуста</p>`;
+
         $("#cart-result").append(noitems);
       }
     },
