@@ -254,7 +254,8 @@ $(function () {
       document.getElementById("dropdown-img").src = "img/icons/RU.svg";
     }
 
-    console.log("TRANSATIONS", lang);
+    localStorage.setItem("language", lang);
+
     $(".lang").each(function (index, item) {
       $(this).text(arrLang[lang][$(this).attr("key")]);
     });

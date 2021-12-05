@@ -265,6 +265,30 @@ $(document).ready(function () {
   // Handler for .ready() called.
   const lang = getLanguage();
 
+  $("#cart-icon").hover(
+    () => {
+      console.log("GOVER");
+      const items = localStorage.getItem("cart");
+      const text =
+        lang === "en"
+          ? `<p>In cart ${JSON.parse(items).length} items</p>`
+          : `<p>в корзине ${JSON.parse(items).length} вещей</p>`;
+
+      const noitems =
+        lang === "en" ? `<p>No items in cart</p>` : `<p>Корзина пуста</p>`;
+      $("#cart-result").css("display", "block");
+      if (JSON.parse(items).length > 0) {
+        $("#cart-result").append(text);
+      } else {
+        $("#cart-result").append(noitems);
+      }
+    },
+    () => {
+      $("#cart-result").css("display", "none");
+      $("#cart-result").empty();
+    }
+  );
+
   console.log("STARTED");
   const ss = $.get(`${url}/shopItem`, (data) => {
     let newStock = "";
@@ -406,32 +430,31 @@ const getLanguage = () => {
 
 const cover = document.querySelector(".cover");
 
-
 // Close details
-const eng = document.getElementById("en-lang");
-const ru = document.querySelector("ru-lang");
+// const eng = document.getElementById("en-lang");
+// const ru = document.querySelector("ru-lang");
 
-eng.onclick = function () {
-  console.log("EN");
-  document.getElementById("dropdown-img").src = "img/icons/EN.svg";
-  localStorage.setItem("language", "en");
-};
-ru.onclick = function () {
-  console.log("RU");
-  document.getElementById("dropdown-img").src = "img/icons/RU.svg";
-  localStorage.setItem("language", "ru");
-};
+// eng.onclick = function () {
+//   console.log("EN");
+//   document.getElementById("dropdown-img").src = "img/icons/EN.svg";
+//   localStorage.setItem("language", "en");
+// };
+// $("#ru-lang").onclick = function () {
+//   console.log("RU");
+//   document.getElementById("dropdown-img").src = "img/icons/RU.svg";
+//   localStorage.setItem("language", "ru");
+// };
 
 //add to cart button
 const like = document.querySelector(".like");
 const inactive = document.querySelector(".inactive-like");
 const active = document.querySelector(".active-like");
 
-inactive.onclick = function () {
+$(".inactive-like").onclick = function () {
   inactive.style.display = "none";
   active.style.display = "block";
 };
-active.onclick = function () {
+$(".active-like").onclick = function () {
   active.style.display = "none";
   inactive.style.display = "block";
 };
