@@ -914,10 +914,17 @@ article a {
 .basket-details .product-description {
   margin-right: 30px;
 }
+
+.row-order {
+  flex-direction: row;
+  display: flex;
+}
 .order-input {
   margin-top: 10px;
-  width: 40%;
+  height: 41px !important;
   padding: 8px 45px 8px 14px;
+  width: 10vw;
+  margin-right: 10px;
   border: #969696 1px solid;
 }
 .order-input::placeholder {
@@ -1109,4 +1116,8 @@ input {
 
 .dropdown-text {
   color: #000 !important;
+}
+
+.basket-close {
+  background-color: transparent;
 }
