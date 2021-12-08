@@ -157,6 +157,7 @@ details[open] p:hover {
   font-weight: 400;
   font-size: 12px;
 }
+
 .nav-links:hover.nav-links::after {
   content: "";
   position: absolute;
@@ -165,7 +166,7 @@ details[open] p:hover {
   bottom: 0;
   width: 166px;
   height: 4px;
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
 }
 a.active {
   background-color: #ffffff;
