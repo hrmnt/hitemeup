@@ -244,7 +244,7 @@ var arrLang = {
     cart: "КОРЗИНА",
     product: "Товар",
     det: "Укажите Ваш рост и необходимую длину изделия",
-    form: "АПОЛНИТЕ АНКЕТУ",
+    form: "ЗАПОЛНИТЕ АНКЕТУ",
     need: "Это необходимо для обработки Вашего заказа и уточнения более точной информации при необходимости",
     name: "Имя",
     sname: "Фамилия",
@@ -270,6 +270,7 @@ $(document).ready(function () {
       const items = localStorage.getItem("cart");
 
       $("#cart-result").css("display", "block");
+      $("#asdqe").attr({ fill: "#000" });
       if (items && JSON.parse(items).length > 0) {
         const text =
           lang === "en"
@@ -279,12 +280,15 @@ $(document).ready(function () {
         $("#cart-result").append(text);
       } else {
         const noitems =
-          lang === "en" ? `<p>No items in cart</p>` : `<p>Корзина пуста</p>`;
+          lang === "en"
+            ? `<p>There are no items in your cart.</p>`
+            : `<p>Товары в Вашей корзине отсутствуют</p>`;
 
         $("#cart-result").append(noitems);
       }
     },
     () => {
+      $("#asdqe").attr({ fill: "#fff" });
       $("#cart-result").css("display", "none");
       $("#cart-result").empty();
     }

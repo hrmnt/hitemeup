@@ -183,7 +183,7 @@ a.active {
 }
 .search,
 .cart {
-  width: 20px;
+  width: 40px;
   position: relative;
   margin-left: 40px;
   display: flex;
@@ -192,6 +192,15 @@ a.active {
   height: 100%;
   cursor: pointer;
 }
+
+.cart a {
+  width: 40px;
+}
+
+.cart:hover {
+  background-color: white;
+}
+
 .cart:hover.cart::after {
   content: "";
   position: absolute;
@@ -284,10 +293,19 @@ a.active {
   max-width: 310px;
   background-color: #ffffff;
   text-align: center;
-  padding: 28px 30px;
+  padding: 14px 30px;
   z-index: 3;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid #c4c4c4;
 }
+
+.cart-result p {
+  font-family: Geometria;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
 .search-result {
   display: none;
   position: absolute;
@@ -920,6 +938,29 @@ article a {
   flex-direction: row;
   display: flex;
 }
+
+.order-sad p {
+  font-family: Geometria;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #000000;
+}
+.align-center {
+  align-items: center;
+}
+
+.align-bottom {
+  align-items: flex-end;
+}
+
+.heading-nomargin {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
 .order-input {
   margin-top: 10px;
   height: 41px !important;
@@ -1008,6 +1049,13 @@ input {
   color: #000000;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.delivery-selected {
+  background-color: #ebebeb;
+  color: #000000;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .pay-icons img {
   margin-right: 32px;
 }
@@ -1121,4 +1169,8 @@ input {
 
 .basket-close {
   background-color: transparent;
+}
+
+#delivery-wrap {
+  margin-top: 20px;
 }
